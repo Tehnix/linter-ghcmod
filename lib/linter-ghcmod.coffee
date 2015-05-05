@@ -10,8 +10,8 @@ class LinterGHCMod extends Linter
   linterName: 'ghcmod'
 
   regex: '.+?:(?<line>\\d+):(?<col>\\d+):\\s+\
-          ((?<error>Error)|(?<warning>Warning))|(?<error>parse error):
-          \\s*(?<message>.*)'
+          ((?<error>Error)|(?<warning>Warning))|(?<error>parse error):\\s*\
+          (?<message>.*)'
   regexFlags: 'gms'
 
   constructor: (editor) ->
