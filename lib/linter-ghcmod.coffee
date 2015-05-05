@@ -7,6 +7,8 @@ Linter = require "#{linterPath}/lib/linter"
 class LinterGHCMod extends Linter
   @syntax: 'source.haskell' # fits all *.hs-files
 
+  cmd = 'ghc-mod check'
+
   linterName: 'ghcmod'
 
   regex: '.+?:(?<line>\\d+):(?<col>\\d+):\\s+\
@@ -17,7 +19,7 @@ class LinterGHCMod extends Linter
   constructor: (editor) ->
     super(editor)
     atom.config.observe 'linter-ghcmod.ghcmodExecutablePath', =>
-      @executablePath = atom.config.get 'linter-ghcmod.ghcmodExecutablePath' + ' check'
+      @executablePath = atom.config.get 'linter-ghcmod.ghcmodExecutablePath'
 
   processMessage: (message, callback) ->
     console.log message
