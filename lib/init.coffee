@@ -1,5 +1,5 @@
 module.exports =
   configDefaults:
-    ghcmodExecutablePath: "ghc-mod"
+    ghcmodExecutablePath: "~/.cabal/bin/ghc-mod"
   activate: ->
     console.log 'activate linter-ghcmod'
