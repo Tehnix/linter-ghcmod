@@ -1,11 +1,11 @@
 {
-  "name": "linter-hlint",
+  "name": "linter-ghcmod",
   "linter-package": true,
   "activationEvents": [],
   "main": "./lib/init",
-  "version": "0.3.3",
-  "description": "Lint haskell code with hlint",
-  "repository": "https://github.com/AtomLinter/linter-hlint",
+  "version": "0.1",
+  "description": "Lint haskell code with ghc-mod",
+  "repository": "https://github.com/Tehnix/linter-ghcmod",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

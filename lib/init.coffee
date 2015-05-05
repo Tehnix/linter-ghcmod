@@ -1,5 +1,5 @@
 module.exports =
   configDefaults:
-    hlintExecutablePath: "hlint"
+    ghcmodExecutablePath: "ghc-mod"
   activate: ->
-    console.log 'activate linter-hlint'
+    console.log 'activate linter-ghcmod'

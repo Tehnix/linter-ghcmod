@@ -4,10 +4,10 @@ Linter = require "#{linterPath}/lib/linter"
 {log, warn} = require "#{linterPath}/lib/utils"
 
 
-class LinterHLint extends Linter
+class LinterGHCMod extends Linter
   @syntax: 'source.haskell' # fits all *.hs-files
 
-  linterName: 'hlint'
+  linterName: 'ghcmod'
 
   regex: '.+?:(?<line>\\d+):(?<col>\\d+):\\s+\
           ((?<error>Error)|(?<warning>Warning)):\\s*\
@@ -16,8 +16,8 @@ class LinterHLint extends Linter
 
   constructor: (editor) ->
     super(editor)
-    atom.config.observe 'linter-hlint.hlintExecutablePath', =>
-      @executablePath = atom.config.get 'linter-hlint.hlintExecutablePath'
+    atom.config.observe 'linter-ghcmod.ghcmodExecutablePath', =>
+      @executablePath = atom.config.get 'linter-ghcmod.ghcmodExecutablePath'
 
   processMessage: (message, callback) ->
     if message == "No Suggestions"
@@ -34,4 +34,4 @@ class LinterHLint extends Linter
   createMessage:(match) ->
     super(match)
 
-module.exports = LinterHLint
+module.exports = LinterGHCMod
