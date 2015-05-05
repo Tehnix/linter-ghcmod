@@ -17,7 +17,7 @@ class LinterGHCMod extends Linter
   constructor: (editor) ->
     super(editor)
     atom.config.observe 'linter-ghcmod.ghcmodExecutablePath', =>
-      @executablePath = atom.config.get 'linter-ghcmod.ghcmodExecutablePath' + 'check'
+      @executablePath = atom.config.get 'linter-ghcmod.ghcmodExecutablePath' + ' check'
 
   processMessage: (message, callback) ->
     console.log message
