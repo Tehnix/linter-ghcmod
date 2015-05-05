@@ -1,5 +1,5 @@
 {XRegExp} = require 'xregexp'
-linterPath = atom.packages.getLoadedPackage("linter").path
+linterPath = atom.packages.getLoadedPackage('linter').path
 Linter = require "#{linterPath}/lib/linter"
 {log, warn} = require "#{linterPath}/lib/utils"
 

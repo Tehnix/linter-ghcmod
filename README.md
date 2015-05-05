@@ -8,4 +8,4 @@ This package will lint your opened Haskell in Atom, using [ghc-mod](http://www.m
 * `$ apm install linter` (if you don't have [AtomLinter/Linter](https://github.com/AtomLinter/Linter) installed).
 * `$ apm install language-haskell` (if you don't have [Haskell syntax highlighting](https://github.com/jroesch/language-haskell) installed).
 * `$ apm install linter-ghcmod`
-* Specify the path to ghc-mod in the settings.  You can find the path by using "which ghc-mod" in the terminal.
+* Specify the path to ghc-mod in the settings.  You can find the path by using `$ which ghc-mod` in the terminal.
