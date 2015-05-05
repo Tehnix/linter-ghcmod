@@ -20,6 +20,7 @@ class LinterGHCMod extends Linter
       @executablePath = atom.config.get 'linter-ghcmod.ghcmodExecutablePath'
 
   processMessage: (message, callback) ->
+    console.log message
     if message == "No Suggestions"
       return []
     messages = []
