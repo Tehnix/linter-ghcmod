@@ -10,7 +10,7 @@ class LinterGHCMod extends Linter
   linterName: 'ghcmod'
 
   regex: '.+?:(?<line>\\d+):(?<col>\\d+):\\s+\
-          ((?<error>Error)|(?<warning>Warning))|(?<error>parse error):\\s*\
+          ((?<error>Error)|(?<warning>Warning)|(?<error>parse error)):\\s*\
           (?<message>.*)'
   regexFlags: 'gms'
 
@@ -25,6 +25,7 @@ class LinterGHCMod extends Linter
     messages = []
     regex = XRegExp @regex, @regexFlags
     for msg in message.split(/\r?\n\r?\n/)
+      console.log msg
       XRegExp.forEach msg, regex, (match, i) =>
         messages.push(@createMessage(match))
       , this
